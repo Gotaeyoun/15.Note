@@ -14,21 +14,28 @@
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script src="../js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header d-flex align-items-center bg-dark text-light px-3">
 			<h1 class="logo">
-				<i class="fa fa-edit"></i>	누구나 메모장
+				<i class="fa fa-edit"></i> 누구나 메모장
 				<small class="text-secondary">v1.0</small>
 			</h1>
-			<button class="bt-login btn btn-outline-success ml-auto"><i class="fab fa-google"></i> 구글 로그인</button>
-			<button class="bt-logout btn btn-outline-danger"><i class="fa fa-sign-out-alt"></i> 로그아웃</button>
+			<button class="bt-login btn btn-outline-info ml-auto"><i class="fab fa-google"></i> 구글 로그인</button>
+			<div class="logout-wrap ml-auto d-flex align-items-center">
+				<img src="" alt="photo" class="icon w50 h50 rounded-circle mr-3">
+				<div class="email mr-3"></div>
+				<button class="bt-logout btn btn-outline-warning"><i class="fa fa-sign-out-alt"></i> 로그아웃</button>
+			</div>
 		</header>
 		<div class="body-wrapper d-flex">
 			<ul class="list-wrapper">
 				<div class="card">
 					<div class="card-body d-flex align-items-center">
-						<h2 class="rounded-circle w70 h70 bg-primary text-light d-flex justify-content-center align-items-center font-weight-bold">오</h2>
+						<h2
+							class="rounded-circle w70 h70 bg-primary text-light d-flex justify-content-center align-items-center font-weight-bold">
+							오</h2>
 						<div class="w-auto ml-3">
 							<h3>오늘의 장보기</h3>
 							<p>1. 호박 2. 파 ...</p>
@@ -46,8 +53,11 @@
 			</form>
 		</div>
 	</div>
-	<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+	<script src="/__/firebase/7.15.5/firebase-app.js"></script>
+	<script src="/__/firebase/7.15.5/firebase-auth.js"></script>
+	<script src="/__/firebase/7.15.5/firebase-database.js"></script>
+	<script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
+	<script src="/__/firebase/init.js"></script>
 	<script src="../js/index.js"></script>
 </body>
 
