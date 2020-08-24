@@ -2,14 +2,37 @@
 .wrapper{height: 100vh;}
 .header{height: 80px;}
 .body-wrapper{height: calc(100vh - 80px);}
-
+.list-wrapper{left: 0; transition:left 0.5s;}
 .header > .logo{font-size: 1.5rem;}
-.body-wrapper > .list-wrapper{flex: 30% 0 0; height: 100%; background-color: #f4f0f0; border:1px solid #ccc;}
+.body-wrapper > .list-wrapper{flex: 30% 0 0; height: 100%; background-color: #f4f0f0; border:1px solid #ccc;  overflow-y: auto;}
 .body-wrapper > .cont-wrapper{flex: 70% 0 0; height: 100%;}
 .body-wrapper > .cont-wrapper > textarea{height: calc(100% - 60px); font-size: 1.5rem;}
 .card > .bt-del {top: 10px; right: 10px; color: #6b6b6b; cursor: pointer;}
-/************************header*****************************/
+.logout-wrap .bt-logout::after{content:" 로그아웃"}
+
+/************************반응형*****************************/
+@media screen and (max-width: 991px){
+	.body-wrapper > .list-wrapper{flex: 35% 0 0;}
+	.body-wrapper > .cont-wrapper{flex: 65% 0 0;}
+}
+
+@media screen and (max-width: 767px){
+	.body-wrapper > .list-wrapper{flex: 50% 0 0;}
+	.body-wrapper > .cont-wrapper{flex: 50% 0 0;}
+	.logout-wrap .icon, .logout-wrap .email{display: none;}
+}
+
+@media screen and (max-width: 575px){
+	.header > .logo{font-size: 1.5rem;}
+	.header > .logo > small{display: none;}
+	.body-wrapper > .list-wrapper{flex: 40% 0 0;}
+	.list-wrapper{position:fixed; left: -100%; top:80px; z-index: 999;}
+	.body-wrapper > .list-wrapper{width: 80%; box-shadow: 2px 0 16px rgba(0,0,0,0.5);}
+	.body-wrapper > .cont-wrapper{flex: 100% 0 0;} 
+	.logout-wrap .bt-logout::after{content:" "}
+}
 
 
 
-/************************footer*****************************/
+
+
